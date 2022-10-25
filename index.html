@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--CSS link-->
+    <link rel="stylesheet" href="style.css">
+    <!--Google fonts-->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Sen:wght@400;700;800&display=swap"
+        rel="stylesheet">
+    <!--font-awesome link-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>JustStreamIt</title>
+
+</head>
+
+<body>
+    <div class="navbar">
+        <div class="navbar-container">
+            <div class="logo-container">
+                <img class="logo" src="assets/Logo.png" alt="stranger-things">
+            </div>
+
+            <div class="menu-container">
+                <ul class="menu-list">
+                    <li class="menu-list-item active">Home</li>
+                    <li class="menu-list-item">Movies</li>
+                    <li class="menu-list-item">Series</li>
+                    <li class="menu-list-item">Popular</li>
+                    <li class="menu-list-item">Trends</li>
+                </ul>
+            </div>
+            <!--Profile space-->
+            <div class="profile-container">
+                <img class="profile-image" src="assets/profile.jpg" alt="">
+                <div class="profile-txt-container">
+                    <span class="profile-txt">Profile</span>
+                    <i class="fas fa-caret-down"></i>
+                </div>
+                <div class="toggle-thems">
+                    <i class="fas fa-moon toggle-thems-icon"></i>
+                    <i class="fas fa-sun toggle-thems-icon"></i>
+                    <div class="toggle-thems-ball"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Sidbar space-->
+    <!-- <div class="sidebar">
+        <i class="left-menu-icon fas fa-search"></i>
+        <i class="left-menu-icon fas fa-home"></i>
+        <i class="left-menu-icon fas fa-users"></i>
+        <i class="left-menu-icon fas fa-bookmark"></i>
+        <i class="left-menu-icon fas fa-tv"></i>
+        <i class="left-menu-icon fas fa-hourglass-start"></i>
+    </div> -->
+
+    <!--Hero Section-->
+    <section class="banare" id="banare">
+        <img id="banare-img" class="banare-img" alt="">
+        <div class="banare-text">
+            <h1 id="banare-title" class="banare-title"></h1>
+            <p>
+                <span id="banare-category"></span>
+                <span id="banare-year"></span>
+                <span id="banare-duration"></span>
+                <span id="banare-writers"></span>
+            </p>
+            <br />
+            <p id="banareDescription"></p>
+            <br />
+            <button class="trailer"> <i class="fas fa-play"></i> Watch Trailer</button>
+        </div>
+
+    </section>
+    <div class="container">
+        <section>
+            <div class="row">
+                <div class="header">
+                    <h3 class="title">FILM LES MIEUX NOTES</h3>
+                    <div class="progress-bar"></div>
+                </div>
+                <div class="movie-container">
+                    <button class="handle left-handle">
+                        <div class="text">&#8249;</div>
+                    </button>
+                    <div class="slider" id="bestNote"></div>
+                    <button class="handle right-handle">
+                        <div class="text">&#8250;</div>
+                    </button>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="row">
+                <div class="header">
+                    <h3 class="title">ACTION</h3>
+                    <div class="progress-bar"></div>
+                </div>
+                <div class="movie-container">
+                    <button class="handle left-handle">
+                        <div class="text">&#8249;</div>
+                    </button>
+                    <div id="action" class="slider" id="bestNote"></div>
+                    <button class="handle right-handle">
+                        <div class="text">&#8250;</div>
+                    </button>
+                </div>
+            </div>
+
+        </section>
+        <section>
+            <div class="row">
+                <div class="header">
+                    <h3 class="title">ADVENTURE</h3>
+                    <div class="progress-bar"></div>
+                </div>
+                <div class="movie-container">
+                    <button class="handle left-handle">
+                        <div class="text">&#8249;</div>
+                    </button>
+                    <div id="adventure" class="slider" id="bestNote"></div>
+                    <button class="handle right-handle">
+                        <div class="text">&#8250;</div>
+                    </button>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="row">
+                <div class="header">
+                    <h3 class="title">ANIMATION</h3>
+                    <div class="progress-bar"></div>
+                </div>
+                <div class="movie-container">
+                    <button class="handle left-handle">
+                        <div class="text">&#8249;</div>
+                    </button>
+                    <div id="animation" class="slider" id="bestNote"></div>
+                    <button class="handle right-handle">
+                        <div class="text">&#8250;</div>
+                    </button>
+                </div>
+            </div>
+        </section>
+    <!--Model-->
+    <div id="modal-container">
+        <div id="movie_card" class="card">
+            <div class="card-thumbnail">
+                <img id="modal-image" />
+            </div>
+            <div class="card-body">
+                <span id="close" class="close">&times;</span>
+                <span id="modal-title" class="card-title"></span>
+
+                <p>
+                    <span id="modal-year"></span>
+                    <span id="modal-duration"></span>
+                    <span id="modal-category"></span>
+                    <span id="modal-votes"></span>
+                </p>
+                <p class="card-description" id="movieDescription"></p>
+                <a href="#">Read more</a>
+                <button class="trailer"> <i class="fas fa-play"></i> Watch Trailer</button>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<!--JS link-->
+<script src="main.js"></script>
+
+</html>
